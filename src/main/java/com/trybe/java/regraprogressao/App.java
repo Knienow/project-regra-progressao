@@ -35,7 +35,13 @@ public class App {
       noteActivityArray[index] = scanner.nextDouble();
       scanner.nextLine();
       
+      totalSumNotes += (weightActivityArray[index] * noteActivityArray[index]) / 100;
       totalSumWeight += weightActivityArray[index];
+    }
+    double averageActivities = (totalSumNotes * 100) / totalSumWeight;
+
+    if (totalSumWeight != 100) {
+      System.out.println("A soma dos pesos é diferente de 100!");
     }
    
     scanner.close();
