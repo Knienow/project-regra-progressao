@@ -43,6 +43,17 @@ public class App {
     if (totalSumWeight != 100) {
       System.out.println("A soma dos pesos é diferente de 100!");
     }
+
+    if (averageActivities >= 85.0) {
+      System.out.println("Parabéns! Você alcançou " + averageActivities
+          + "%! E temos o prazer de informar que "
+          + "você obteve aprovação!");
+    } else {
+      System.out.println("Lamentamos informar que, "
+          + "com base na sua pontuação alcançada neste período, "
+          + averageActivities
+          + "%, você não atingiu a pontuação mínima necessária para sua aprovação.");
+    }
    
     scanner.close();
   }
