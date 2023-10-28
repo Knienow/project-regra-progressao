@@ -17,7 +17,9 @@ public class App {
     scanner.nextLine();
 
     double totalSumWeight = 0;
+    double totalSumNotes = 0;
     double[ ] weightActivityArray = new double[activities];
+    double[ ] noteActivityArray = new double[activities];
     String[] activitiesNameArray = new String[activities];
   
     for (int index = 0; index < activities; index++) {
@@ -29,8 +31,13 @@ public class App {
       weightActivityArray[index] = scanner.nextDouble();
       scanner.nextLine();
       
+      System.out.println("Digite a nota obtida para " + activitiesNameArray[index] + ": ");
+      noteActivityArray[index] = scanner.nextDouble();
+      scanner.nextLine();
+      
       totalSumWeight += weightActivityArray[index];
     }
+   
     scanner.close();
   }
 }
